@@ -89,9 +89,330 @@ body{
     flex: 1;
 }
 
+/* ==================== MENU SECTION ==================== */
+        .menu-section {
+            padding: 80px 5%;
+            background: #fffaf5;
+        }
+
+        .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.subtitle {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8B4513;
+    background: #f5ebe0;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.separator .left,
+.separator .right {
+    width: 50px;
+    height: 1px;
+    background: #d4a373;
+}
+
+.separator .center {
+    color: #8B4513;
+    font-size: 0.9rem;
+}
+
+.section-header p {
+    font-size: 1.05rem;
+    color: #666;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+        .section-header .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: none;
+            border: 2px solid #F98911;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #F98911;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background: #F98911;
+            /* background: #8B4513; */
+            color: white;
+        }
+
+        /* Grille des plats */
+        .plats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+          .card {
+            /* width: 300px; */
+            background: white;
+            border-radius: 20px;
+            padding: 70px 20px 25px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-top: 70px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image qui dépasse */
+        .image-container {
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 50%;
+            padding: 2px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Contenu de la carte */
+        .card h3 {
+            color: #F98911;
+            font-size: 1.4rem;
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #F98911;
+            margin-bottom: 20px;
+        }
+
+        .btn-order {
+            width: 100%;
+            padding: 12px;
+            background: #F98911;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-order:hover {
+            background: #db5d23;
+        }
+
+
+        /* Tableaux Boissons & Desserts */
+        .tables-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .menu-table-wrapper {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .menu-table-wrapper h3,th {
+            font-size: 1.5rem;
+            color: #F98911;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .menu-table td {
+            padding: 12px 8px;
+            border-bottom: 1px dashed #f2cea8;
+            color: #4a4a4a;
+        }
+
+        .menu-table tr:last-child td {
+            border-bottom: none;
+        }
+
+         /* ==================== À PROPOS ==================== */
+        .about-section {
+            background: #f7e3cd;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #F98911;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #2c2c2c;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 5% 20px;
+        }
+        .footer-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .fast-food{
+            font-size: 2.5rem;
+            font-family: "Kaushan Script", cursive;
+            font-weight: 700;
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        .logo{
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #aaa;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #8B4513;
+            padding-top: 20px;
+            font-size: 0.8rem;
+        }
+
+        .vertical-divider {
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #8B4513, transparent);
+}
+
+
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            
+            .plats-grid {
+                gap: 20px;
+            }
+            
+            .tables-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            
+          
+        }
+
+
+
+    
+        
+
+              
+
+
 
 /*Tu fais tes ablutions d’abord après tu fais face à 
 la kaaba 🕋 après tu fais 1 fatiha après tu prie sur 
 le prophète psl tu recommences fatiha 3 x ayat koursiyou
  3x alam nashrah 3 x inna anzalnahu 3x 1 falaqi 1 nassi 
 formuler ses voeux et fermer avec Salat hala Nabi 1x
+
