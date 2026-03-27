@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+body{
+    background-color: #ccc;
+}
+.navbar{
+    z-index: 1;
+}
+/*La page d'Accueil*/
+.body-text, .image{
+   z-index: 1;
+}
+.body-text h1{
+    font-family: "Kapakana", cursive;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 75px;
+}
+.body-text h3{
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+}
+.body-text .txt span{
+    font-size: 2rem;
+    font-family: "Kapakana", cursive;
+}
+.body-text h3, span{
+    color: #F98911;
+}
+.body-text .btn{
+    background: #F98911;
+    font-size: 31px;
+    font-family: Georgia, cursive;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 320px;
+}
+.image img{
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    
+}
+.svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+.svg .img1{
+    height: 100vh;
+    
+}
+.svg .img2{
+    height: 490px;
+    position: absolute;
+    right: 54%;
+}
+/*Notre caroussel*/
+#slider{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 330px;
+    padding: 35px 0;
+    background: #ccc;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 35px;
+}
+#slider .carousel-item img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   border: 2px solid #FFF;
+   border-radius: 10px;
+}
+
+#slider .carousel-control-prev,
+#slider .carousel-control-next{
+    background: #eb7f05f5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#slider .carousel-item .position-relative{
+    flex: 1;
+}
+
+
+        /* style sur la page de contact */
+
+#pied-page{
+    background-color: black;
+    max-height: fit-content;
+    border-radius: 30px 30px 0 0;
+    margin: 60px 0 12px 5px;
+} 
+.text-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+.text-groupe{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.text-groupe h1{
+    color: #F98911;
+    font-family: "Kapakana", cursive;
+}
+.text-groupe p{
+    color: #FFF;
+    font-family: "Kaushan Script", cursive;
+}
+.text-logo img{
+    width: 120px;
+    height: auto;
+} 
+.donnees{
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 60px;
+    padding-left: 25px;
+}
+iframe{
+    border-radius: 10px;
+    margin-top: -50px;
+}
+.donnees ul li{
+    display: flex;
+    padding: 2px;
+    font-weight: bold;
+}
+.donnees h3{
+    color: #F98911;
+    text-align: center;
+}
+.detail a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.trait{
+    width: 3px;           
+    height: 60px;         
+    background-color: #7d470d; 
+    align-content: center;
+    margin-top: -80px;   
+}
+.contact-us li{
+    margin: 12px;
+}
+.social-media li{
+    margin: 5px;
+}
+i{
+    color: white;
+}
+.copyright {
+    border-top: 2px solid #7d470d;
+    width: 24%;
+    margin: 25px;
+    padding-bottom: 8px;
+    justify-self: center;
+}
+.copyright p{
+    color: #FFF;
+}
+
+ 
+
+/*Tu fais tes ablutions d’abord après tu fais face à 
+la kaaba 🕋 après tu fais 1 fatiha après tu prie sur 
+le prophète psl tu recommences fatiha 3 x ayat koursiyou
+ 3x alam nashrah 3 x inna anzalnahu 3x 1 falaqi 1 nassi 
+formuler ses voeux et fermer avec Salat hala Nabi 1x 
