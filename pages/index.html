@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Restaurant</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,10 +24,9 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="../image/faye.png"
-            class="rounded-circle"
-            width="80"
-            height="80"
+            src="../image/AF.png"
+            width="110"
+            height="110"
             alt="logo"
           />
         </a>
@@ -43,7 +42,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 fw-bold">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"
                 >Accueil</a
@@ -59,7 +58,7 @@
               <a class="nav-link" href="#apropos">À propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#localisation">Contact</a>
             </li>
           </ul>
           <form class="d-flex align-items-center gap-2 me-auto">
@@ -74,29 +73,31 @@
               />
               <i class="fa-brands fa-sistrix"></i>
             </span>
-            <button class="btn btn-success" type="submit">Search</button>
+            
           </form>
+
+            <div class="d-flex gap-3 mt-2">
+              <button class="btn btn-outline-secondary rounded-pill">
+                <i class="fa-regular fa-circle-user"></i> Sign in
+              </button>
+              <button class="btn btn-light rounded-pill">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+              </button>
+          </div>
         </div>
-        <div class="d-flex gap-3">
-          <button class="btn btn-outline-secondary rounded-pill">
-            <i class="fa-regular fa-circle-user"></i> Sign in
-          </button>
-          <button class="btn btn-light rounded-pill">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
-          </button>
-        </div>
+        
       </div>
     </nav>
     <!--Page d'Accueil-->
     <div class="container">
-      <div class="d-flex pt-5 justify-content-center align-items-center">
+      <div class="home d-flex pt-5 justify-content-center align-items-center">
         <div
           class="body-text d-flex flex-column text-center justify-content-center align-items-center"
         >
           <h1>Restaurant</h1>
           <h3 class="text-uppercase">Amadou Faye</h3>
-          <p class="fs-5 fw-bold">La bonne cuisine commence ici!</p>
-          <p class="txt fs-5 fw-bold">
+          <p class="fs-5 fw-bold txt">La bonne cuisine commence ici!</p>
+          <p class="txt fs-5 fw-bold txt">
             <span>E</span>xplorez, <span>S</span>avourez, <span>R</span>enevez
           </p>
           <span class="fs-4">
@@ -371,12 +372,68 @@
       </div>
     </section>
 
+ <!-- Localisation/Contact Section -->
+    <section id="localisation" class="contact-section" >
+        <div class="section-header">
+            <h2>📍 Notre Restaurant</h2>
+            <div class="separator">
+            <span class="left"></span>
+            <span class="center">✦</span>
+            <span class="right"></span>
+        </div>
+            <p>Venez nous rendre visite dans un cadre chaleureux</p>
+        </div>
+
+        <div class="localisation-container">
+            <div class="localisation-info">
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Adresse</h3>
+                    <p>123 Rue de la Gastronomie<br>Dakar, Sénégal</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Téléphone</h3>
+                    <p>+221 77 123 45 67</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi: 11h - 23h<br>Samedi - Dimanche: 10h - 00h</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🚗</div>
+                    <h3>Accès</h3>
+                    <p>Parking gratuit<br>Accessible aux PMR</p>
+                </div>
+            </div>
+            <div class="localisation-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.123456789!2d-17.456789!3d14.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzM3LjMiTiAxN8KwMjcnMjQuMyJX!5e0!3m2!1sfr!2ssn!4v1234567890" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; min-height: 400px;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
        <!-- À propos -->
-    <section id="apropos" class="about-section">
-        <h2>Notre Histoire</h2>
-        <p>Fondé par Amadou Faye, notre restaurant est un lieu de partage où la cuisine traditionnelle rencontre la créativité. 
-        Chaque plat est préparé avec des ingrédients frais et locaux, dans le respect des saveurs authentiques. 
-        Venez découvrir une expérience culinaire unique dans une ambiance chaleureuse.</p>
+    <section id="apropos" class="section about-section fade-in">
+        <div class="section-header">
+            <h2>📖 Notre Histoire</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <p>Fondé par Amadou Faye, notre restaurant est un lieu de partage où la cuisine traditionnelle rencontre la créativité. Chaque plat est préparé avec des ingrédients frais et locaux, dans le respect des saveurs authentiques.</p>
+            <p>Depuis plus de 10 ans, nous accueillons nos convives dans une ambiance chaleureuse et familiale. Notre passion pour la gastronomie nous pousse à innover constamment tout en préservant l'authenticité des recettes traditionnelles.</p>
+            <p>Venez découvrir une expérience culinaire unique où chaque bouchée raconte une histoire.</p>
+            <div class="signature">— Amadou Faye, Chef & Fondateur</div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -417,7 +474,7 @@
                 <h4>Suivez-nous</h4>
                 <p>📱 Instagram | Facebook | TikTok</p>
                  <div class="logo">
-                   <img src="../image/faye.png" alt="logo"  />
+                   <img src="../image/faye.png" alt="logo"  class="rounded-pill"/>
                  </div>
             </div>
         </div>
@@ -425,7 +482,23 @@
             <p style="font-size: 1.3rem;">&copy; Copyright 2026  - Force-N | By <span>Groupe 3</span></p>
         </div>
     </footer>
+    
+     <!-- Effet Scroll de Navigation -->
+      <script>
+           //Transition scroll
+          const navbar = document.querySelector( '.navbar' );
+          window.addEventListener( 'scroll', function(){
+             if(this.scrollY > 200){
+               navbar.classList.add('slidedown');
+             }else{
+                navbar.classList.remove('slidedown');
+             }
+          })
+      </script>
 
+
+  <!-- Bouton retour en haut -->
+    <button id="scrollToTop" class="scroll-top">↑</button>
     <!-- Script pour le filtrage -->
     <script>
        // Filtrage des catégories
@@ -467,7 +540,25 @@
                 }
             });
         });
+
+
+
+        // Bouton retour en haut
+        const scrollTopBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
     </script>
+
+
 
 
     <script
