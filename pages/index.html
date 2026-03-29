@@ -58,7 +58,7 @@
               <a class="nav-link" href="#apropos">À propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#localisation">Contact</a>
             </li>
           </ul>
           <form class="d-flex align-items-center gap-2 me-auto">
@@ -73,7 +73,7 @@
               />
               <i class="fa-brands fa-sistrix"></i>
             </span>
-            <button class="btn btn-success" type="submit">Search</button>
+            
           </form>
 
             <div class="d-flex gap-3 mt-2">
@@ -372,12 +372,68 @@
       </div>
     </section>
 
+ <!-- Localisation/Contact Section -->
+    <section id="localisation" class="contact-section" >
+        <div class="section-header">
+            <h2>📍 Notre Restaurant</h2>
+            <div class="separator">
+            <span class="left"></span>
+            <span class="center">✦</span>
+            <span class="right"></span>
+        </div>
+            <p>Venez nous rendre visite dans un cadre chaleureux</p>
+        </div>
+
+        <div class="localisation-container">
+            <div class="localisation-info">
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Adresse</h3>
+                    <p>123 Rue de la Gastronomie<br>Dakar, Sénégal</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Téléphone</h3>
+                    <p>+221 77 123 45 67</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi: 11h - 23h<br>Samedi - Dimanche: 10h - 00h</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🚗</div>
+                    <h3>Accès</h3>
+                    <p>Parking gratuit<br>Accessible aux PMR</p>
+                </div>
+            </div>
+            <div class="localisation-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.123456789!2d-17.456789!3d14.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzM3LjMiTiAxN8KwMjcnMjQuMyJX!5e0!3m2!1sfr!2ssn!4v1234567890" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; min-height: 400px;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
        <!-- À propos -->
-    <section id="apropos" class="about-section">
-        <h2>Notre Histoire</h2>
-        <p>Fondé par Amadou Faye, notre restaurant est un lieu de partage où la cuisine traditionnelle rencontre la créativité. 
-        Chaque plat est préparé avec des ingrédients frais et locaux, dans le respect des saveurs authentiques. 
-        Venez découvrir une expérience culinaire unique dans une ambiance chaleureuse.</p>
+    <section id="apropos" class="section about-section fade-in">
+        <div class="section-header">
+            <h2>📖 Notre Histoire</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <p>Fondé par Amadou Faye, notre restaurant est un lieu de partage où la cuisine traditionnelle rencontre la créativité. Chaque plat est préparé avec des ingrédients frais et locaux, dans le respect des saveurs authentiques.</p>
+            <p>Depuis plus de 10 ans, nous accueillons nos convives dans une ambiance chaleureuse et familiale. Notre passion pour la gastronomie nous pousse à innover constamment tout en préservant l'authenticité des recettes traditionnelles.</p>
+            <p>Venez découvrir une expérience culinaire unique où chaque bouchée raconte une histoire.</p>
+            <div class="signature">— Amadou Faye, Chef & Fondateur</div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -439,6 +495,10 @@
              }
           })
       </script>
+
+
+  <!-- Bouton retour en haut -->
+    <button id="scrollToTop" class="scroll-top">↑</button>
     <!-- Script pour le filtrage -->
     <script>
        // Filtrage des catégories
@@ -480,7 +540,25 @@
                 }
             });
         });
+
+
+
+        // Bouton retour en haut
+        const scrollTopBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
     </script>
+
+
 
 
     <script
