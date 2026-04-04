@@ -435,7 +435,106 @@
             <div class="signature">— Amadou Faye, Chef & Fondateur</div>
         </div>
     </section>
+     <!-- Formulaire de Commande -->
+      <section class="cmd">
+            <div class="cmd-card">
+               <div class="cmd-hrader">
+                   
+               </div>
+               <div class="card-body">
+                     <div class="card-body-icon">🍽️</div>
+                     <div>
+                        <h2>Passer une Commande</h2>
+                        <p>Remplissez vos onformations ci-dessous</p>
+                     </div>
+               </div>
+               <!--Plats et prix -->
+               <div class="dish-banner">
+                  <div class="dish-img"></div>
+                  <div>
+                     <div class="dish-name">Mbaxal Slaoum</div>
+                     <div class="dish-price">2500 fcfa / Portion</div>
+                  </div>
+                  <!--Button pour la quantité de Commande -->
+                  <div class="control">
+                      <button class="btn-qty" onclick="changeQty(-1)" aria-label="Diminuer">-</button>
+                      <span class="qty-num" id="qty">1</span>
+                      <button class="btn-qty" onclick="changeQty(1)" aria-label="Augmenter">+</button>
+                  </div>
+               </div>
+                <form action="" id="comForm" class="form-body">
 
+                <!--Nom et Prenom-->
+                    <div class="field-row">
+                        <div class="field">
+                           <label for="prenom">Prénom :<span class="req">*</span></label>
+                           <input type="text" id="prenom" name="prenom" placeholder="Junior" required>
+                           <p class="error-msg">Champs requis</p>
+                        </div>
+                        <div class="field">
+                           <label for="nom">Nom :<span class="req">*</span></label>
+                           <input type="text" id="nom" name="nom" placeholder="Loshima" required>
+                           <p class="error-msg">Champs requis</p>
+                        </div>   
+                    </div>
+                    
+                     <!--Téléphone-->
+                    <div class="field">
+                        <label for="tel">Téléphone :<span class="req">*</span></label>
+                        <input type="tel" id="tel" name="tel" placeholder="76 616 33 08" 
+                          pattern="[0-9\s\+]{9,14}" required>
+                        <p class="error-msg">Numéro de téléphone invalide</p>
+                    </div>
+                    <div class="divise"></div>
+                     
+                     <!--Type de Commande -->
+                    <div>
+                        <div class="section-title">Type de commande <span class="req">*</span></div>
+                          <div class="radio-grp" id="type-grp">
+                               <input type="radio" name="type-cmd" id="sur-place" value="sur-place" class="radio-option">
+                               <label for="sur-place" class="radio-card">Sur Place</label>
+
+                               <input type="radio" name="type-cmd" id="livraison" value="livraison" class="radio-option">
+                               <label for="livraison" class="radio-card">Livraison</label>
+
+                               <input type="radio" name="type-cmd" id="emporter" value="emporter" class="radio-option">
+                               <label for="emporter" class="radio-card">Emporter</label>
+                          </div>
+                      </div>
+                       
+                       <!--Adresse de Livraison -->
+                        <div class="adresse-field field">
+                            <label for="nom">Adresse de livraison :<span class="req"> *</span></label>
+                            <input type="text" id="adresse" name="adresse" placeholder="Quartier, rue , n° VIlla" required>
+                            <p class="error-msg">Veuillez ajouter votre adresse de Livraison</p>
+                        </div>
+                      <div class="divise"></div>
+                        
+                        <!--Mode de Paiement -->
+                       <div>
+                        <div class="section-title">Mode de paiement <span class="req">*</span></div>
+                          <div class="radio-grp" id="paiement-grp">
+                               <input type="radio" name="paiement" id="carte" value="carte" class="radio-option">
+                               <label for="carte" class="radio-card">Carte Bancaire</label>
+
+                               <input type="radio" name="paiement" id="espece" value="espece" class="radio-option">
+                               <label for="espece" class="radio-card">Espèces</label>
+
+                               <input type="radio" name="paiement" id="mobile" value="mobile" class="radio-option">
+                               <label for="mobile" class="radio-card">Mobile Money</label>
+                        </div>
+                      </div>
+                      <div class="recap">
+                           <span class="recap-label">Total (<span id="recapQty">1</span> portion)</span>
+                           <span class="recap-total" id="recapTotal">1 500  FCFA</span>
+                      </div>
+                      <button type="submit" class="btn-confirmer">Confirmer</button>
+                </form>
+
+                <div class="msg-valid" id="msg-valid">Message</div>
+            </div>
+             
+      </section>
     <!-- Footer -->
     <footer id="contact" class="footer">
       
@@ -482,7 +581,8 @@
             <p style="font-size: 1.3rem;">&copy; Copyright 2026  - Force-N | By <span>Groupe 3</span></p>
         </div>
     </footer>
-    
+    <!-- Effet Scroll de Navigation -->
+     <script src="../assiet/form.js"></script>
      <!-- Effet Scroll de Navigation -->
       <script>
            //Transition scroll
