@@ -36,7 +36,7 @@ body{
     font-size: 31px;
     font-family: Georgia, cursive;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 320px;
+    width: 300px;
 }
 .image img{
     width: 320px;
@@ -492,6 +492,11 @@ body{
             background: url(../image/mbaxal.jpg);
             background-size: cover;
          }
+         #dish-img{
+            width: 80px; height: 80px;
+            border-radius: 15px;
+            
+         }
          .dish-name{font-size: 20px; font-weight: 800; }
          .dish-price{font-size: 13px; color: #666; margin-top: 5px;}
           
@@ -500,6 +505,11 @@ body{
             align-items: center;
             gap: 14px;
             margin-left: auto;
+         }
+         .control h5{
+            position: absolute;
+            margin-top: 5rem;
+            
          }
          .control .btn-qty{
             width: 35px; height: 35px;

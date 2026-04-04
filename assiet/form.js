@@ -1,8 +1,30 @@
 
 //Formulaire
-const PRICE = 2500;
+//const PRICE = 2500;
+let PRICE = parseInt(document.getElementById('dish-price').textContent.replace(/\s/g, ''));
 let qty = 1;
 
+//-------Notre button pour passer une commande-----//
+document.querySelectorAll('.btn-order').forEach(btn => {
+    btn.addEventListener('click', function(){
+        const nom =  this.dataset.nom;
+        const prix = parseInt(this.dataset.prix);
+        const img =  this.dataset.img;
+
+        document.getElementById('dish-img').src = img;
+        document.getElementById('dish-img').alt = nom;
+        document.getElementById('dish-nom').textContent = nom;
+        document.getElementById('dish-price').textContent = prix.toLocaleString('fr-SN') + ' FCFA / Portion';
+
+        PRICE = prix;
+        qty = 1;
+        document.getElementById('qty').textContent = qty;
+        document.getElementById('recapQty').textContent = qty;
+        document.getElementById('recapTotal').textContent = prix.toLocaleString('fr-SN') + ' FCFA';
+       
+        document.querySelector('.cmd').scrollIntoView({ behavior: 'smooth'});
+     });
+  });
 //-------Quantité-----//
 function changeQty(d) {
     qty = Math.max(1, qty + d);
