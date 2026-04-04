@@ -107,7 +107,7 @@
           </span>
           <br />
           <button type="button" class="btn text-light text-center rounded-pill">
-            Reservez
+             <a href="#cmd" class="nav-link text-light">Reservez</a>
           </button>
         </div>
 
@@ -235,7 +235,12 @@
               <h3>Pizza Pimentée</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
               <div class="price">2000 FCFA</div>
-              <button class="btn-order">Commandez</button>
+              <button class="btn-order"
+                 data-nom = "Pizza Pimentée"
+                 data-prix = "2000"
+                 data-img = "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200">
+                 Commandez
+              </button>
             </div>
             <!-- Double Burger -->
             <div class="card" data-category="plats">
@@ -245,7 +250,12 @@
               <h3>Double Burger</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
               <div class="price">2800 FCFA</div>
-              <button class="btn-order">Commandez</button>
+              <button class="btn-order"  
+                 data-nom = "Double Burger"
+                 data-prix = "2800"
+                 data-img = "https://images.unsplash.com/photo-1550547660-d9450f859349?w=200">
+                Commandez
+            </button>
             </div>
             <!-- Panni Milane -->
               <div class="card" data-category="plats">
@@ -255,7 +265,12 @@
                 <h3>Panni Milane</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
                 <div class="price">2600 FCFA</div>
-                <button class="btn-order">Commandez</button>
+                <button class="btn-order"
+                    data-nom = "Panni Milane"
+                    data-prix = "2600"
+                    data-img = "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200">
+                    Commandez
+                  </button>
               </div>
 
               <!-- Riz au Poisson -->
@@ -266,7 +281,12 @@
                 <h3>Riz au Poisson</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
                 <div class="price">2600 FCFA</div>
-                <button class="btn-order">Commandez</button>
+                <button class="btn-order"
+                    data-nom = "Riz au Poisson"
+                    data-prix = "2600"
+                    data-img = "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=200">
+                    Commandez
+                </button>
               </div>
 
               <!-- Soupu Kandia -->
@@ -277,7 +297,12 @@
                 <h3>Soupu Kandia</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
                 <div class="price">3036 FCFA</div>
-                <button class="btn-order">Commandez</button>
+                <button class="btn-order"
+                    data-nom = "Soupu Kandia"
+                    data-prix = "3036"
+                    data-img = "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200">
+                   Commandez
+                  </button>
               </div>
 
               <!-- Yassa Poulet -->
@@ -288,7 +313,12 @@
                 <h3>Yassa Poulet</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
                 <div class="price">2900 FCFA</div>
-                <button class="btn-order">Commandez</button>  
+                <button class="btn-order"
+                    data-nom = "Yassa Poulet"
+                    data-prix = "2900"
+                    data-img = "https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?w=200">
+                    Commandez
+                  </button>  
               </div>
         </div>
       </div>
@@ -436,7 +466,7 @@
         </div>
     </section>
      <!-- Formulaire de Commande -->
-      <section class="cmd">
+      <section class="cmd" id="cmd">
             <div class="cmd-card">
                <div class="cmd-hrader">
                    
@@ -450,13 +480,16 @@
                </div>
                <!--Plats et prix -->
                <div class="dish-banner">
-                  <div class="dish-img"></div>
+                  <div class="dish-img">
+                     <img id="dish-img" src="" alt="">
+                  </div>
                   <div>
-                     <div class="dish-name">Mbaxal Slaoum</div>
-                     <div class="dish-price">2500 fcfa / Portion</div>
+                     <div class="dish-name" id="dish-nom">Mbaxal Slaoum</div>
+                     <div class="dish-price" id="dish-price">2500 fcfa / Portion</div>
                   </div>
                   <!--Button pour la quantité de Commande -->
                   <div class="control">
+                       <h5>Quantité</h5>
                       <button class="btn-qty" onclick="changeQty(-1)" aria-label="Diminuer">-</button>
                       <span class="qty-num" id="qty">1</span>
                       <button class="btn-qty" onclick="changeQty(1)" aria-label="Augmenter">+</button>
