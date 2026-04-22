@@ -121,4 +121,36 @@ const typeCmd = document.querySelector('input[name="type-cmd"]:checked');
         });
 
      });
+
+     //Pour la table de reservation 
+   
+  // Voir / cacher le mot de passe
+  function togglePw(inputId, btn) {
+    const input = document.getElementById(inputId);
+    const isPassword = input.type === 'password';
+    input.type = isPassword ? 'text' : 'password';
+    btn.innerHTML = isPassword
+      ? '<i class="bi bi-eye-slash"></i>'
+      : '<i class="bi bi-eye"></i>';
+  }
+
+  // Validation Bootstrap à la soumission
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!this.checkValidity()) {
+      this.classList.add('was-validated'); // ✅ Bootstrap active les messages d'erreur
+    } else {
+      alert('Connexion réussie !');
+    }
+  });
+
+  document.getElementById('signup-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!this.checkValidity()) {
+      this.classList.add('was-validated');
+    } else {
+      alert('Compte créé avec succès !');
+    }
+  });
+
      

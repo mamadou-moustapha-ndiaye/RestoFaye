@@ -439,13 +439,13 @@ body{
           
           .cmd-card{
             width: 100%;
-            max-width: 500px;
+            max-width: 520px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            background: #2c2c2c;
-            border: 2px solid #ccc;
+            background: #ffff;
+            border: 1px solid #2e2c2c;
             border-radius: 10px;
             overflow: hidden;
-        
+            padding: auto;
          }
          .cmd-hrader{
             width: 100%;
@@ -497,10 +497,11 @@ body{
             
          }
          .dish-name{font-size: 20px; font-weight: 800; }
-         .dish-price{font-size: 13px; color: #666; margin-top: 5px;}
+         .dish-price{font-size: 13px; color: black; margin-top: 5px;}
           
          .control{
             display: flex;
+            justify-content: center;
             align-items: center;
             gap: 14px;
             margin-left: auto;
@@ -543,7 +544,8 @@ body{
             gap: 1.25rem;
          }
          .req{
-           color: #8B4513;
+           color: red;
+           margin-left: 3px;
          }
          .field-row{display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
          .field{
@@ -552,19 +554,19 @@ body{
             gap: 8px;
          }
          .field label{
-            color: #6b6b6b;
+            color: rgb(17, 16, 16);
             font-weight: 500;
             font-size: 21px;
          }
          .field input{
-            padding: 0 12px;
+            padding: 3px 12px;
             border: 1px solid #6b6b6b;
             background: transparent;
             font-size: 18px;
             outline: none;
             border-radius: 8px;
             transition: border-color 0.15s, box-shadow 0.15s; 
-            color: #ccc;
+            color:  #db5d23;
          }
          .error-msg{
             color: red;
@@ -572,8 +574,8 @@ body{
             display: none;
          }
          .field input:focus{
-            border-color: #ccc;
-            box-shadow: 0 0 0 3px rgba(77, 60, 173, 0.12);
+            border-color: blue;
+            box-shadow: 0 0 0 5px rgba(10, 14, 218, 0.12);
             
          }
          .adresse-field{
@@ -595,39 +597,40 @@ body{
                 transform: translateY(0);
             }
          }
-         .divise{height: 1px; background: #422f21;}
+         .divise{height: 1px; background: #ccc;}
 
          .section-title{
             font-size: 21px;
             font-weight: 600;
-            color: #6b6b6b;
+            color: rgb(17, 16, 16);
             margin-bottom: 10px;
             
          }
          .radio-grp{display: flex; gap: 10px; flex-wrap: wrap;}
          .radio-option{position: absolute; opacity: 0; width: 0; height: 0;}
          .radio-card{
-            border: 1px solid #6b6b6b;
+            border: 1px solid #2c2c2c;
             border-radius: 100px;
             padding: 8px 16px;
             cursor: pointer;
-            color: #fff;
-            font-size: 13px;
+            color: #db5d23;
+            font-size: 17px;
             transition: all 0.5s;
          }
          .radio-card:hover{
             border-color: #8B4513;
-            color: #db5d23;
+            color: #ccc;
+            background: #2c2c2c;
          }
          .radio-option:checked + .radio-card{
             border-color: #8B4513;
-            color: #db5d23;
-            background: #aaa;
+            color: #ccc;
+            background: #2c2c2c;
          }
          .btn-confirmer{
             width: 100%;
             height: 30px;
-            background: green;
+            background: #db5d23;
             cursor: pointer;
             transition: background 0.15s;
             font-size: 21px;
@@ -638,7 +641,7 @@ body{
             font-family: Georgia, 'Times New Roman', Times, serif;
          }
          .btn-confirmer:hover{
-            background: rgb(29, 121, 29);
+            background: #ac3a05;
          }
          .recap{
             border: 1px solid #6b6b6b;
@@ -669,6 +672,7 @@ body{
             opacity: 1;
             transform: translateX(-50%) translateY(0);
          }
+
          /*================ Galerie =====================*/
         .gallery-panel {
             max-width: 1200px;
@@ -789,6 +793,116 @@ body{
             display: block;
 
         }
+
+         /* ==================== Reservatioon ==================== */
+         #reserve{
+            display: flex;
+            justify-content: center;
+           align-items: center;
+           padding: 20px 5px;
+         }
+   
+
+    .auth-card {
+      width: 100%;
+      max-width: 500px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+    }
+
+    .nav-tabs .nav-link {
+      color: #888;
+      border: none;
+      border-bottom: 2px solid transparent;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.5rem;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #b8922a;
+      border-bottom: 2px solid #b8922a;
+      background: transparent;
+      font-weight: 600;
+    }
+
+    .nav-tabs {
+      border-bottom: 1px solid #e0d8cc;
+    }
+
+    .btn-gold {
+      background-color: #b8922a;
+      color: white;
+      border: none;
+      letter-spacing: 0.15em;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      padding: 0.75rem;
+      border-radius: 0;
+    }
+
+    .btn-gold:hover {
+      background-color: #d4aa50;
+      color: white;
+    }
+
+    .form-control {
+      border-radius: 0;
+      border-color: #ddd5c5;
+      font-size: 0.9rem;
+      padding: 0.7rem 1rem;
+    }
+
+    .form-control:focus {
+      border-color: #b8922a;
+      box-shadow: 0 0 0 0.2rem rgba(184,146,42,0.15);
+    }
+
+    .form-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 0.4rem;
+    }
+
+    .restaurant-name {
+      font-size: 1.4rem;
+      letter-spacing: 0.3em;
+      color: #b8922a;
+      text-transform: uppercase;
+    }
+
+    .divider-text {
+      color: #aaa;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+    }
+
+    .btn-outline-secondary {
+      border-radius: 0;
+      font-size: 0.78rem;
+      color: #888;
+      border-color: #ddd5c5;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #f5ede0;
+      border-color: #b8922a;
+      color: #b8922a;
+    }
+
+    a.text-gold {
+      color: #b8922a;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    a.text-gold:hover { text-decoration: underline; }
+ 
+     
         /* ==================== FOOTER ==================== */
         .footer {
             background: #2c2c2c;
