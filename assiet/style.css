@@ -1,10 +1,10 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 body{
     background-color: #ccc;
 }
 .navbar{
     z-index: 1;
-   
 }
 /*La page d'Accueil*/
 .body-text, .image{
@@ -417,8 +417,8 @@ body{
         .signature {
             margin-top: 30px;
             font-style: italic;
-	   font-weight:600;
-	    font-family: "Kaushan Script", cursive;
+            font-weight:600;
+            font-family: "Kaushan Script", cursive;
             color: #F98911;
         }
 
@@ -795,38 +795,107 @@ body{
         }
 
          /* ==================== Reservatioon ==================== */
-         #reserve{
+         #reserver{
             display: flex;
             justify-content: center;
-           align-items: center;
-           padding: 20px 5px;
+            align-items: center;
+            background: #f5f5f5;
+            padding: 20px 30px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: .3s ease;
          }
-   
+         .reserve-card{
+             width: 100%;
+             max-width: 540px;
+             overflow: hidden;
+             background: #ccc;
+             border: 1px solid #666;
+             border-radius: 10px;
+             
+         }
+         .reserve-header{
+            background: #1a1a1a;
+            text-align: center;
+            padding: 1.5rem;
+         }
+         .reserve-subtitle{
+              color: #888;
+              margin: 0 0 4px;
+              font-size: 13px;
+              letter-spacing: 0.7em;
+         }
+         .reserve-title{
+            color: #fff;
+            margin: 0;
+         }
+         .reserve-label{
+           font-size: 15px;
+           color: #db5d23;
+           letter-spacing: 0.17em;
+           margin: 6px 0 0;
+         }
+         #reserver .form-control[type="text"]{
+            background: transparent;
+            border: 1px solid #fff;
+            
+         }
+         #reserver .form-control:focus{
+            border-color: blue;
+            box-shadow: 0 0 0 5px rgba(10, 14, 218, 0.12);
+            background: #fff;
+            
+         }
+         #reserver .btn{
+            background: #db5d23;
+            border: none;
+         }
+          #reserver .btn:focus{
+            border-color: #db5d23;
+            box-shadow:  0 0 5px rgba(218, 111, 10, 0.12);
+          }
+         /* ==================== Connexion et Inscription ==================== */
+         #connecter{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 5px;
+            background: url(../image/bg3.avif);
+            background-position:  center;
+            background-size: cover;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transform .5s ease, opacity .5s ease;
+            
+         }
+        #connecter.visible{
+            display: flex;
+        }
 
-    .auth-card {
-      width: 100%;
-      max-width: 500px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.08);
-    }
+        .auth-card {
+            width: 100%;
+            max-width: 500px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background: transparent;
+            backdrop-filter: blur(20px);
+        }
+        .nav-tabs .nav-link {
+        color: #e9e2e2;
+        border: none;
+        border-bottom: 2px solid transparent;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.75rem 1.5rem;
+        }
 
-    .nav-tabs .nav-link {
-      color: #888;
-      border: none;
-      border-bottom: 2px solid transparent;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.75rem 1.5rem;
-    }
-
-    .nav-tabs .nav-link.active {
-      color: #b8922a;
-      border-bottom: 2px solid #b8922a;
-      background: transparent;
-      font-weight: 600;
-    }
+        .nav-tabs .nav-link.active {
+        color: #b8922a;
+        border-bottom: 2px solid #b8922a;
+        background: transparent;
+        font-weight: 600;
+        }
 
     .nav-tabs {
       border-bottom: 1px solid #e0d8cc;
@@ -853,38 +922,40 @@ body{
       border-color: #ddd5c5;
       font-size: 0.9rem;
       padding: 0.7rem 1rem;
+      
     }
 
     .form-control:focus {
       border-color: #b8922a;
-      box-shadow: 0 0 0 0.2rem rgba(184,146,42,0.15);
+      box-shadow: 0 0 0 0.2rem rgba(211, 170, 59, 0.308);
     }
 
     .form-label {
       font-size: 0.72rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #888;
+      color: #0e0d0d;
       margin-bottom: 0.4rem;
+      font-size: 15px;
     }
 
     .restaurant-name {
-      font-size: 1.4rem;
+      font-size: 2.4rem;
       letter-spacing: 0.3em;
-      color: #b8922a;
+      color: #db5d23;
       text-transform: uppercase;
     }
-
+    
     .divider-text {
-      color: #aaa;
+      color: #0e0d0d;
       font-size: 0.75rem;
       letter-spacing: 0.2em;
     }
 
     .btn-outline-secondary {
       border-radius: 0;
-      font-size: 0.78rem;
-      color: #888;
+      font-size: 0.80rem;
+      color: #0e0d0d;
       border-color: #ddd5c5;
     }
 
@@ -895,7 +966,7 @@ body{
     }
 
     a.text-gold {
-      color: #b8922a;
+      color: #e6ac0f;
       text-decoration: none;
       font-size: 0.8rem;
     }
