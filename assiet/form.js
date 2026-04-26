@@ -122,7 +122,6 @@ const typeCmd = document.querySelector('input[name="type-cmd"]:checked');
 
      });
 
-     //Pour la table de reservation 
    
   // Voir / cacher le mot de passe
   function togglePw(inputId, btn) {
@@ -130,15 +129,15 @@ const typeCmd = document.querySelector('input[name="type-cmd"]:checked');
     const isPassword = input.type === 'password';
     input.type = isPassword ? 'text' : 'password';
     btn.innerHTML = isPassword
-      ? '<i class="bi bi-eye-slash"></i>'
-      : '<i class="bi bi-eye"></i>';
+      ? '<i class="fa-solid fa-eye-slash"></i>'
+      : '<i class="fa-regular fa-eye"></i>';
   }
 
-  // Validation Bootstrap à la soumission
+  // Validation à la soumission
   document.getElementById('login-form').addEventListener('submit', function(e) {
     e.preventDefault();
     if (!this.checkValidity()) {
-      this.classList.add('was-validated'); // ✅ Bootstrap active les messages d'erreur
+      this.classList.add('was-validated'); // ✅  les messages d'erreur
     } else {
       alert('Connexion réussie !');
     }
@@ -153,4 +152,42 @@ const typeCmd = document.querySelector('input[name="type-cmd"]:checked');
     }
   });
 
-     
+    //FOrmulaire d'inscription et de connection 
+
+     document.addEventListener('DOMContentLoaded', function(){
+
+          const signup = document.querySelector('#btn-signin');
+          const login = document.querySelector('#btn-login');
+          const connecter = document.querySelector('#connecter');
+
+          function showConnecter() {
+              
+              connecter.style.display = 'flex';
+              connecter.style.opacity = '1';
+              connecter.style.transform = 'translateY(0)';
+              connecter.scrollIntoView({behavior: 'smooth'});
+          }
+
+          signup.addEventListener('click', showConnecter);
+          login.addEventListener('click', showConnecter);
+         });
+
+         //Réservation Table
+       
+          (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+              .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                  }
+
+                  form.classList.add('was-validated')
+                }, false)
+              })
+          })()
