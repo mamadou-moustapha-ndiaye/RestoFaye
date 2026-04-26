@@ -10,13 +10,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link
+   <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"  />
+     
     <link rel="stylesheet" href="../assiet/style.css" />
   </head>
   <body>
@@ -77,15 +75,15 @@
           </form>
 
             <div class="d-flex gap-3 mt-2">
-              <button class="btn btn-outline-secondary rounded-pill">
-                <a class="nav-link" href="#signup">
+              <button class="btn btn-secondary rounded-pill" id="btn-signin" >
+                
                    <i class="fa-regular fa-circle-user"></i> Sign in
-                </a>
+                
               </button>
-              <button class="btn btn-light rounded-pill">
-                <a class="nav-link" href="#login">
+              <button class="btn btn-light rounded-pill"  id="btn-login">
+              
                   <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
-                </a>
+                
               </button>
           </div>
         </div>
@@ -111,7 +109,7 @@
           </span>
           <br />
           <button type="button" class="btn text-light text-center rounded-pill">
-             <a href="" class="nav-link text-light">Reservez</a>
+             <a href="#reserver" class="nav-link text-light">Reservez</a>
           </button>
         </div>
 
@@ -454,8 +452,112 @@
             </div>
         </div>
     </section>
+      <!-- Reservation-->
+       <section id="reserver">
+           <div class="reserve-card">
+            <div class="reserve-header">
+                <p class="reserve-subtitle">Restaurant</p>
+                <h2 class="reserve-title">Amadou Faye</h2>
+                <p class="reserve-label">Réservation de Table</p>
+                <img src="../image/AF.png" alt="Logo" style="width: 80px; height: 80px;">
+            </div>
+             <form class="row g-3 p-4 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="validationCustom01" class="form-label">Prenom : </label>
+                  <input type="text" class="form-control rounded" id="validationCustom01" placeholder="Prenom" required>
+                  <div class="valid-feedback">
+                    valider !
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom02" class="form-label">Nom :</label>
+                  <input type="text" class="form-control rounded" id="validationCustom02" placeholder="Nom" required>
+                  <div class="valid-feedback">
+                    valider !
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Téléphone : </label>
+                  <input type="tel" class="form-control rounded" id="validationCustom03" placeholder="76 616 33 08" required>
+                  <div class="invalid-feedback">
+                     Numéro de Téléphone requis!
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Email : </label>
+                  <input type="email" class="form-control rounded" id="validationCustom03" placeholder="vous@exemple.com" required>
+                  <div class="invalid-feedback">
+                     Email requis !
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom04" class="form-label">Heure :</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="12h00">12h00</option>
+                    <option>12h30</option>
+                    <option>13h00</option>
+                    <option>20h30</option>
+                    <option>21h00</option>
+                  </select>
+                  <div class="invalid-feedback">
+                     Veuillez choisir une heure !
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom04" class="form-label">Nombre :</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="1">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <div class="invalid-feedback">
+                     Nombres de Personne !
+                  </div>
+                </div>
 
+                 <div class="col-md-4">
+                   <label for="validationCustom03" class="form-label">Date: </label>
+                  <input type="date" class="form-control" id="validationCustom03" value="12/04/2026" required>
+                  <div class="invalid-feedback">
+                     La date de réservation !
+                  </div>
+                </div>
 
+                  <div class="col-md-12">
+                  <label for="validationCustom04" class="form-label">Occasion spécial:</label>
+                  <select class="form-select" id="validationCustom04">
+                    <option selected disabled value="Aucune">Aucune</option>
+                    <option>Famille</option>
+                    <option>Dîner Romantique</option>
+                    <option>Repas d'Affaires</option>
+                    <option>Anniversaire</option>
+                    <option>Fête de Famille</option>
+                  </select>
+                  <div class="invalid-feedback">
+                     Nombres de Personne !
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                     Accepter les conditions générales
+                    </label>
+                    <div class="invalid-feedback">
+                      Vous devez donner votre accord avant de soumettre.
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-md-12">
+                    <button class="btn btn-primary w-100 fs-4" type="submit">Confirmer la Réservation</button>
+                  </div>
+              </form>
+            </div>
+       </section>
+      
        <!-- À propos -->
     <section id="apropos" class="section about-section fade-in">
         <div class="section-header">
@@ -574,26 +676,26 @@
              
       </section>
        <!-- Formulaire de connexion -->
-      <section id="reserve">
+      <section id="connecter">
         <div class="card auth-card p-4">
 
-  <!-- EN-TÊTE -->
-  <div class="text-center mb-4">
-    <div class="restaurant-name">Fast Food</div>
-    <div class="text-muted" style="font-size:0.65rem;letter-spacing:0.4em;">RESTAURANT GASTRONOMIQUE</div>
-  </div>
+      <!-- EN-TÊTE -->
+      <div class="text-center mb-4">
+        <div class="restaurant-name">Fast Food</div>
+        <div class="" style="font-size:0.75rem;letter-spacing:0.4em;">RESTAURANT AmadouFaye</div>
+      </div>
 
-  <!-- ✅ ONGLETS Bootstrap Nav Tabs -->
-  <ul class="nav nav-tabs mb-4" id="authTabs" role="tablist">
-    <li class="nav-item flex-fill text-center" role="presentation">
-      <button class="nav-link active w-100"
+      <!-- ✅ ONGLETS Nav Tabs -->
+      <ul class="nav nav-tabs mb-4" id="authTabs" role="tablist">
+        <li class="nav-item flex-fill text-center" role="presentation">
+          <button class="nav-link active w-100"
               id="login-tab"
               data-bs-toggle="tab"
               data-bs-target="#login"
               type="button"
-              role="tab" id="login">
+              role="tab">
               
-        Connexion
+            Connexion
       </button>
     </li>
     <li class="nav-item flex-fill text-center" role="presentation">
@@ -602,7 +704,7 @@
               data-bs-toggle="tab"
               data-bs-target="#signup"
               type="button"
-              role="tab" id="signup">
+              role="tab">
         Inscription
       </button>
     </li>
@@ -624,7 +726,7 @@
                  id="login-email"
                  placeholder="vous@exemple.com"
                  required>
-          <!-- ✅ Bootstrap Validation : message d'erreur -->
+          <!-- ✅ Validation : message d'erreur -->
           <div class="invalid-feedback">
             Veuillez entrer une adresse e-mail valide.
           </div>
@@ -633,7 +735,7 @@
         <!-- Champ Mot de passe -->
         <div class="mb-3">
           <label class="form-label" for="login-pw">Mot de passe</label>
-          <!-- ✅ Bootstrap Input Group : champ + bouton -->
+          <!-- ✅ Input Group : champ + bouton -->
           <div class="input-group">
             <input type="password"
                    class="form-control"
@@ -690,7 +792,7 @@
       <form novalidate id="signup-form">
 
         <!-- Prénom + Nom sur la même ligne -->
-        <!-- ✅ Bootstrap Grid Row/Col -->
+        <!-- ✅  Grid Row/Col -->
         <div class="row g-2 mb-3">
           <div class="col-6">
             <label class="form-label" for="su-prenom">Prénom</label>
@@ -727,7 +829,7 @@
         <div class="mb-3">
           <label class="form-label" for="su-tel">
             Téléphone
-            <span class="text-muted fw-light" style="font-size:0.65rem;text-transform:none;letter-spacing:0">(optionnel)</span>
+            <span class="fw-light" style="font-size:0.65rem;text-transform:none;letter-spacing:0;color: #000;">(optionnel)</span>
           </label>
           <input type="tel"
                  class="form-control"
@@ -746,7 +848,7 @@
                    required
                    minlength="8">
             <button class="btn btn-outline-secondary" type="button" onclick="togglePw('su-pw', this)">
-              <i class="bi bi-eye"></i>
+              <i class="fa-regular fa-eye"></i>
             </button>
             <div class="invalid-feedback">Minimum 8 caractères requis.</div>
           </div>
@@ -755,7 +857,7 @@
         <!-- ✅ Bootstrap Checkbox -->
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="su-terms" required>
-          <label class="form-check-label" for="su-terms" style="font-size:0.8rem;color:#666">
+          <label class="form-check-label" for="su-terms" style="font-size:0.8rem;color:#1a1919">
             J'accepte les <a href="#" class="text-gold">conditions d'utilisation</a>
             et la <a href="#" class="text-gold">politique de confidentialité</a>.
           </label>
@@ -794,7 +896,7 @@
   </div>
   <!-- fin tab-content -->
 
-</div>
+        </div>
       </section>
     <!-- Footer -->
     <footer id="contact" class="footer">
